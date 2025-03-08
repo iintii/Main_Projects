@@ -55,8 +55,8 @@
 ```plaintext
 .
 ├── config.py          # Loads environment variables from sens.env using python-dotenv
-├── m.py (main)            # Contains the bot logic: login, fetch top posts, compile and post digest
-├── s.env           # Environment file storing Reddit API credentials (see below)
+├── m.py (main)        # Contains the bot logic: login, fetch top posts, compile and post digest
+├── s.env              # Environment file storing Reddit API credentials (see below)
 └── README.md          # This file
 ```
 ## ✅ Conclusion
