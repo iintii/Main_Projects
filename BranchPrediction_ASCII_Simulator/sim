@@ -1,0 +1,47 @@
+#!/usr/bin/env python3
+
+#Call all Predictors
+import sys
+import trace
+from BimodalBP import BimodalBP
+from GShare import GSHAREBP
+from HybridBP import HybridBP
+from nBIT import SMITHNBP
+
+if __name__ == "__main__":
+    predictor_type = sys.argv[1]
+
+    if predictor_type == "gshare":
+        m = int(sys.argv[2])
+        n = int(sys.argv[3])
+        trace_file = sys.argv[4]
+
+        predictor = GSHAREBP(m,n)
+        predictor.run(f"traces/{trace_file}")
+
+    elif predictor_type == "smith":
+        b = int(sys.argv[2])
+        trace_file = sys.argv[3]
+
+        predictor = SMITHNBP(b)
+        predictor.run(f"traces/{trace_file}")
+
+    elif predictor_type == "bimodal":
+        m = int(sys.argv[2])
+        trace_file = sys.argv[3]
+
+        predictor = BimodalBP(m)
+        predictor.run(f"traces/{trace_file}")
+
+    elif predictor_type == "hybrid":
+        k = int(sys.argv[2])
+        m1 = int(sys.argv[3])
+        n = int(sys.argv[4])
+        m2 = int(sys.argv[5])
+        trace_file = sys.argv[6]
+
+        predictor = HybridBP(k, m1, n, m2)
+        predictor.run(f"traces/{trace_file}")
+    else:
+        print("Incorrect predictor type")
+        sys.exit(1)
