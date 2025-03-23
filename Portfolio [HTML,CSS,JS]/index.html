@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Slidefolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="slide">
+        <!-- Landing page (Welcome to Portfolio) -->
+        <div
+          class="item"
+          style="background-image: url(); background-position: 0% 80%"
+        >
+          <div class="content">
+            <div class="name"></div>
+            <div class="welcome">Welcome to my Portfolio</div>
+            <div class="desc-container">
+              <section id="profile">
+                <div class="section__pic-container">
+                  <img src="./imgs/FKdTgon5.jpg" alt="Inti Profile Picture" />
+                </div>
+                <div class="section__text">
+                  <p class="section__text__p1">Hello, I'm</p>
+                  <h1 class="title">Intisher Hossain</h1>
+                  <p class="section__text__p2">A Software Developer</p>
+                  <div class="btn-container">
+                    <button
+                      class="btn btn-color-2"
+                      onclick="window.open('./assets/resume-example.pdf', '_blank')"
+                    >
+                      Download Resume
+                    </button>
+                    <button 
+                      class="btn btn-color-1" 
+                      onclick="goToContactSlide()"
+                    >
+                      Contact Info
+                    </button>
+                  </div>
+                  <div id="socials-container">
+                    <img
+                      src="./imgs/linkedin.png"
+                      alt="My LinkedIn profile"
+                      class="icon"
+                      onclick="window.open('https://linkedin.com/in/intisherhossain/', '_blank')"
+                    />
+                    <img
+                      src="./imgs/github.png"
+                      alt="My Github profile"
+                      class="icon"
+                      onclick="window.open('https://github.com/iintii/Main_Projects', '_blank')"
+                    />
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience page -->
+        <div
+          class="item"
+          style="background-image: url(); background-position: 0% 75%"
+        >
+          <div class="content">
+            <div class="name">Experience</div>
+            <div class="desc-container">
+              <div class="experience-details-container">
+                <p class="section__text__p1"></p>
+                <h2 class="experience-sub-title">Technical Skills</h2>
+                <div class="article-container">
+                  <!-- Skill cards -->
+                  <article class="skill-card">
+                    <i class="fab fa-python skill-icon"></i> <!-- Changed from fas to fab -->
+                    <div>
+                      <h3>Python</h3>
+                      <div class="skill-level">
+                        <span class="filled"></span>
+                        <span class="filled"></span>
+                        <span class="filled"></span>
+                        <span class="filled"></span>
+                        <span></span> <!-- Removed filled class to show 4/5 -->
+                      </div>
+                      <p>Advanced</p>
+                    </div>
+                  </article>
+                  <article class="skill-card">
+                    <i class="fab fa-r-project skill-icon"></i>
+                    <div>
+                      <h3>R</h3>
+                      <div class="skill-level">
+                        <span class="filled"></span>
+                        <span class="filled"></span>
+                        <span class="filled"></span>
+                        <span class="filled"></span>
+                        <span></span> <!-- Removed filled class to show 4/5 -->
+                      </div>
+                      <p>Advanced</p>
+                    </div>
+                  </article>
+                  <article class="skill-card">
+                    <i class="fas fa-database skill-icon"></i>
+                    <div>
+                      <h3>SQL</h3>
+                      <div class="skill-level">
+                        <span class="filled"></span>
+                        <span class="filled"></span>
+                        <span class="filled"></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <p>Intermediate</p>
+                    </div>
+                  </article>
+                  <article class="skill-card">
+                    <div class="cpp-icon-container">
+                      <span class="cpp-text">C++</span>
+                    </div>
+                    <div>
+                      <h3>C++</h3>
+                      <div class="skill-level">
+                        <span class="filled"></span>
+                        <span class="filled"></span>
+                        <span class="filled"></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <p>Intermediate</p>
+                    </div>
+                  </article>
+                  <article class="skill-card">
+                    <i class="fab fa-java skill-icon"></i>
+                    <div>
+                      <h3>Java</h3>
+                      <div class="skill-level">
+                        <span class="filled"></span>
+                        <span class="filled"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <p>Basic</p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projects page -->
+        <div
+          class="item"
+          style="background-image: url(); background-position: 0% 90%"
+        >
+          <div class="content">
+            <div class="name">Projects</div>
+            <div class="desc-container">
+              <div class="desc">
+                
+                <div class="project-carousel">
+                  <div class="project-carousel-container">
+                    <!-- Project 1 -->
+                    <div class="project-item active">
+                      <div class="project-icon"><i class="fa-duotone fa-solid fa-person-running" style="font-size: 200px;"></i>
+                      </div>
+                      <div class="project-title-container">
+                        <h3 class="project-title">Dapr Dash</h3>
+                        <a href="https://github.com/iintii/Main_Projects/tree/main/Game.Dapr_Dash" class="github-btn" target="_blank">
+                          <i class="fab fa-github"></i>
+                        </a>
+                      </div>
+                      <p class="project-description">2D platformer to showcase core C++ concepts such as encapsulation with custom structs, vector container management, and memory-efficient resource handling.</p>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="project-item">
+                      <div class="project-icon">
+                        <!-- Icon placeholder -->
+                        <i class="fa-duotone fa-solid fa-dove" style="font: size 200px;--fa-primary-color: #000000; --fa-secondary-color: #88a300;"></i>
+                      </div>
+                      <div class="project-title-container">
+                        <h3 class="project-title">BirdVision CNN</h3>
+                        <a href="https://github.com/iintii/Main_Projects/blob/main/Data%20Science%20and%20Analytics%20Projects/cnn-bird-species-img-classification-optimization.ipynb" class="github-btn" target="_blank">
+                          <i class="fab fa-github"></i>
+                        </a>
+                      </div>
+                      <p class="project-description">Advanced image classification system leveraging deep Convolutional Neural Networks with TensorFlow and Keras Tuner, using Bayesian optimization.</p>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="project-item">
+                      <div class="project-icon">
+                        <!-- Icon placeholder -->
+                        <i class="fa-solid fa-code-branch"></i>
+                      </div>
+                      <div class="project-title-container">
+                        <h3 class="project-title">Branch Prediction Simulator</h3>
+                        <a href="https://github.com/iintii/branch-prediction-simulator" class="github-btn" target="_blank">
+                          <i class="fab fa-github"></i>
+                        </a>
+                      </div>
+                      <p class="project-description">Advanced CPU architecture simulator implementing Bimodal, GShare, Hybrid, and Smith n-bit algorithms with real-time ASCII visualization.</p>
+                    </div>
+                    
+                    <!-- Project 4 -->
+                    <div class="project-item">
+                      <div class="project-icon">
+                        <i class="fa-sharp fa-solid fa-folder-tree"></i>
+                      </div>
+                      <div class="project-title-container">
+                        <h3 class="project-title">My Portfolio</h3>
+                        <a href="https://github.com/iintii/my-portfolio" class="github-btn" target="_blank">
+                          <i class="fab fa-github"></i>
+                        </a>
+                      </div>
+                      <p class="project-description">A portfolio website built with vanilla HTML5, CSS3, and JavaScript, featuring advanced DOM manipulation, CSS keyframe animations, and dynamic content rendering.</p>
+                    </div>
+                    
+                    <!-- Project 5 -->
+                    <div class="project-item">
+                      <div class="project-icon">
+                        <i class="fa-sharp-duotone fa-solid fa-heart-crack"></i>
+                      </div>
+                      <div class="project-title-container">
+                        <h3 class="project-title">Ensemble Stroke Predictor</h3>
+                        <a href="https://github.com/iintii/ensemble-stroke-predictor" class="github-btn" target="_blank">
+                          <i class="fab fa-github"></i>
+                        </a>
+                      </div>
+                      <p class="project-description">Advanced stroke prediction system implementing Random Forest, Gradient Boosting and Voting Classifiers with Bayesian hyperparameter optimization.</p>
+                    </div>
+                    
+                    <!-- Project 6 -->
+                    <div class="project-item">
+                      <div class="project-icon">
+                        <i class="fa-sharp fa-solid fa-robot"></i>
+                      </div>
+                      <div class="project-title-container">
+                        <h3 class="project-title">Bots Galore</h3>
+                        <a href="https://github.com/iintii/bots-galore" class="github-btn" target="_blank">
+                          <i class="fab fa-github"></i>
+                        </a>
+                      </div>
+                      <p class="project-description">Automated content aggregation system built with PRAW API integration that securely authenticates with OAuth2 and scrapes targeted data across multiple subreddits.</p>
+                    </div>
+                    
+                    <!-- Project 7 -->
+                    <div class="project-item">
+                      <div class="project-icon">
+                        <i class="fa-sharp fa-solid fa-plane-arrival"></i>
+                      </div>
+                      <div class="project-title-container">
+                        <h3 class="project-title">Airlines Customer Sentment Analysis</h3>
+                        <a href="https://github.com/iintii/airlines-customer-sentiment-analysis" class="github-btn" target="_blank">
+                          <i class="fab fa-github"></i>
+                        </a>
+                      </div>
+                      <p class="project-description">Sentiment analysis platform built in R using NRC lexicon for airline feedback classification with topic modeling algorithms and real-time Shiny visualizations.</p>
+                    </div>
+                    
+                    <!-- Project 8 -->
+                    <div class="project-item">
+                      <div class="project-icon">
+                        <i class="fa-sharp fa-solid fa-code-compare"></i>
+                      </div>
+                      <div class="project-title-container">
+                        <h3 class="project-title">A Compiler from Scratch</h3>
+                        <a href="https://github.com/iintii/compiler-from-scratch" class="github-btn" target="_blank">
+                          <i class="fab fa-github"></i>
+                        </a>
+                      </div>
+                      <p class="project-description">Custom language compiler built from scratch,  implementing lexical analysis, recursive descent parsing, and C code generation.</p>
+                    </div>
+                  </div>
+                  
+                  <!-- Project navigation controls with dots between arrows -->
+                  <div class="project-navigation">
+                    <button class="project-nav-btn prev-project"><i class="fas fa-chevron-left"></i></button>
+                    <div class="project-dots">
+                      <span class="project-dot active"></span>
+                      <span class="project-dot"></span>
+                      <span class="project-dot"></span>
+                      <span class="project-dot"></span>
+                      <span class="project-dot"></span>
+                      <span class="project-dot"></span>
+                      <span class="project-dot"></span>
+                      <span class="project-dot"></span>
+                    </div>
+                    <button class="project-nav-btn next-project"><i class="fas fa-chevron-right"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact page -->
+        <div
+          class="item"
+          style="background-image: url(); background-position: 0% 65%"
+        >
+          <div class="content">
+            <div class="name">Contact</div>
+            <div class="desc-container">
+              <div class="desc">
+                <h2 class="experience-sub-title">Get In Touch</h2>
+                <div class="contact-details">
+                  <a href="mailto:intihoss@gmail.com" class="contact-item">
+                    <i class="fas fa-envelope contact-icon"></i>
+                    <p>Email: intihoss@gmail.com</p>
+                  </a>
+                  <a
+                    href="https://linkedin.com/in/intisherhossain"
+                    target="_blank"
+                    class="contact-item"
+                  >
+                    <i class="fab fa-linkedin contact-icon"></i>
+                    <p>LinkedIn: linkedin.com/in/intisherhossain</p>
+                  </a>
+                  <a
+                    href="https://github.com/iintii/Main_Projects"
+                    target="_blank"
+                    class="contact-item"
+                  >
+                    <i class="fab fa-github contact-icon"></i>
+                    <p>GitHub: github.com/iintii</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="button">
+        <button class="prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="next"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
