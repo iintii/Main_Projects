@@ -1026,4 +1026,34 @@ body {
   filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.3));
 }
 
+/* Email copy functionality styling */
+.copy-email {
+  cursor: pointer;
+  position: relative;
+}
+
+.copy-tooltip {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(17, 153, 142, 0.8);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.copy-email:hover .copy-tooltip {
+  opacity: 0.9;
+}
+
+.copy-email.copied .copy-tooltip {
+  content: "Copied!";
+  opacity: 1;
+  background: #38ef7d;
+}
+
 
