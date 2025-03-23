@@ -16,3 +16,18 @@ ENDWHILE
 PRINT "Average: "
 PRINT s / a
 
+PRINT "Hello, World!"
+LET x = 5
+IF x == 5 THEN
+    PRINT "x is 5"
+ENDIF
+
+WHILE x > 0 REPEAT
+    PRINT x
+    LET x = x - 1
+ENDWHILE
+
+INPUT y
+PRINT "You entered:"
+PRINT y
+
