@@ -146,4 +146,37 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error("Contact slide not found"); // Debug output
     }
   };
+
+  // Email copy to clipboard functionality
+  window.copyEmailToClipboard = function(email, element) {
+    navigator.clipboard.writeText(email).then(function() {
+      // Success - show copied message
+      const tooltip = element.querySelector('.copy-tooltip');
+      tooltip.textContent = "Copied!";
+      element.classList.add('copied');
+      
+      // Reset after 2 seconds
+      setTimeout(() => {
+        tooltip.textContent = "Click to copy";
+        element.classList.remove('copied');
+      }, 2000);
+    }).catch(function() {
+      // Error - fallback to older method if clipboard API fails
+      const textArea = document.createElement("textarea");
+      textArea.value = email;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textArea);
+      
+      const tooltip = element.querySelector('.copy-tooltip');
+      tooltip.textContent = "Copied!";
+      element.classList.add('copied');
+      
+      setTimeout(() => {
+        tooltip.textContent = "Click to copy";
+        element.classList.remove('copied');
+      }, 2000);
+    });
+  };
 });
