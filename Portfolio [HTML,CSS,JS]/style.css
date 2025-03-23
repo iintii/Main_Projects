@@ -404,6 +404,19 @@ body {
   color: #333;
 }
 
+.section__text__p3 {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  position: relative;
+  left: -20px;
+  top: -97px;
+  font-weight: 500;
+  color: #444;
+  font-style: italic;
+  opacity: 0;
+  animation: titleAppear 1s ease-out 0.4s forwards;
+}
+
 .btn-container {
   display: flex;
   justify-content: center;
@@ -435,33 +448,6 @@ body {
 
 .btn:active {
   transform: translateY(-1px);
-}
-
-.btn.btn-color-2 {
-  background: white;
-  color: #333;
-  border: 2px solid #11998e;
-}
-
-#socials-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 1.5rem;
-  gap: 1.2rem;
-  position: relative;
-  top: -90px;
-}
-
-.icon {
-  cursor: pointer;
-  height: 2.5rem;
-  transition: all 0.3s ease;
-  filter: grayscale(50%);
-}
-
-.icon:hover {
-  transform: translateY(-5px);
-  filter: grayscale(0%);
 }
 
 .experience-details-container {
@@ -510,26 +496,32 @@ body {
 
 .article-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr); /* Change from 2 to 3 columns */
+  gap: 10px; /* Reduce gap from 20px to 10px */
   margin-top: 20px;
   width: 95%;
 }
 
 .skill-card {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 15px;
+  justify-content: center;
+  gap: 8px;
   background: rgba(255, 255, 255, 0.4);
-  padding: 12px;
+  padding: 8px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   border: 1px solid rgba(255, 255, 255, 0.6);
   transition: all 0.3s ease;
   position: relative;
+  left: -5%;
   overflow: hidden;
   opacity: 0;
   animation: skillAppear 0.6s ease-out forwards;
+  width: 200px;
+  height: 95px; /* Slightly increased height to accommodate vertical layout */
+  text-align: center;
 }
 
 .skill-card:nth-child(1) {
@@ -588,7 +580,7 @@ body {
 }
 
 .skill-icon {
-  font-size: 2.3rem;
+  font-size: 1.8rem; /* Reduce from 2.3rem to 1.8rem */
   color: #11998e;
   background: linear-gradient(135deg, #11998e, #38ef7d);
   -webkit-background-clip: text;
@@ -610,26 +602,29 @@ body {
 }
 
 .skill-card h3 {
-  margin-bottom: 6px;
-  font-size: 1.3rem;
+  margin-bottom: 2px;
+  font-size: 1.1rem;
   color: #333;
+  text-align: center;
 }
 
 .skill-card p {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #555;
-  margin-top: 5px;
+  margin-top: 2px;
   font-weight: 500;
+  text-align: center;
 }
 
 .skill-level {
   display: flex;
-  gap: 3px;
+  gap: 2px;
+  justify-content: center; /* Center the skill level indicators */
 }
 
 .skill-level span {
-  width: 12px;
-  height: 6px;
+  width: 10px; /* Reduce from 12px to 10px */
+  height: 5px; /* Reduce from 6px to 5px */
   background-color: #ddd;
   border-radius: 3px;
 }
@@ -874,7 +869,7 @@ body {
   margin: 0; /* Reset margin since it's now in a container */
 }
 
-/* GitHub button styling to match black and gold theme */
+/* GitHub button styling to match portfolio green theme */
 .github-btn {
   position: relative;
   top: 30%;
@@ -882,40 +877,41 @@ body {
   height: 40px;
   border-radius: 50%;
   background: #000000;
-  border: 2px solid #FFD700;
-  color: #FFD700;
+  border: 2px solid #ffffff;
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   font-size: 1.3rem;
   transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+  box-shadow: 0 0 10px rgba(17, 153, 142, 0.3);
 }
 
 .github-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+  box-shadow: 0 0 15px rgba(56, 239, 125, 0.6);
   background: #111111;
-  color: #FFC800;
-  border-color: #FFC800;
+  color: #38ef7d;
+  border-color: #11998e;
 }
 
 .github-btn i {
-  filter: drop-shadow(0 0 3px rgba(255, 215, 0, 0.5));
+  filter: drop-shadow(0 0 3px rgba(17, 153, 142, 0.5));
 }
 
 /* Project title - change to gold theme */
 .project-title {
   font-size: 1.8rem;
   margin: 10px 0;
-  background: linear-gradient(90deg, #FFD700, #FFA500); /* Changed to gold/amber gradient */
+  background: linear-gradient(90deg,  #11998e, #38ef7d); /* Changed to gold/amber gradient */
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
   position: relative;
   top: 25%;
+  -webkit-text-stroke: 0.3px rgba(0,0,0,0.5); 
 }
 
 /* Project navigation arrows styling */
@@ -947,22 +943,22 @@ body {
   gap: 10px;
 }
 
-/* Update dots to black and gold theme */
+/* Update dots to match portfolio green theme */
 .project-dot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: transparent; /* Changed to transparent */
-  border: 1px solid transparent; /* Dark border */
+  background-color: transparent; /* Light version of theme color */
+  
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .project-dot.active {
-  background: #FFD700; /* Changed to gold */
+  background: linear-gradient(90deg, #11998e, #38ef7d);
   transform: scale(1.2);
-  border: 1px solid #FFA500; /* Amber border */
-  box-shadow: 0 0 5px #FFD700; /* Gold glow */
+  border: 1px solid #11998e;
+  box-shadow: 0 0 5px rgba(56, 239, 125, 0.7);
 }
 
 /* Update navigation buttons to black and gold theme */
@@ -980,20 +976,15 @@ body {
   transition: transform 0.3s ease;
 }
 
-/* Add gold stroke to the icons inside the buttons */
+/* Add green theme to navigation buttons */
 .project-nav-btn i {
-  -webkit-text-stroke: 3px #FFD700; /* Gold stroke */
-  text-shadow: 0 0 3px rgba(255, 215, 0, 0.5); /* Subtle gold glow */
-}
-
-/* Enhance hover effect */
-.project-nav-btn:hover {
-  transform: scale(1.2);
+  color: #ffffff;
+  text-shadow: 0 0 3px rgba(17, 153, 142, 0.5);
 }
 
 .project-nav-btn:hover i {
-  -webkit-text-stroke: 2px #FFC800; /* Brighter gold on hover */
-  text-shadow: 0 0 8px rgba(255, 215, 0, 0.8); /* Enhanced glow */
+  color: #38ef7d;
+  text-shadow: 0 0 8px rgba(56, 239, 125, 0.8);
 }
 
 /* Proj Icon SHadow */
@@ -1010,7 +1001,7 @@ body {
   transform: translate(-50%, -50%);
   font-size: 200px; /* Can be increased without pushing content */
   z-index: 5;
-  filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(0 5px 5px rgb(117, 255, 211));
 }
 
 /* Custom C++ icon styling */
@@ -1018,9 +1009,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.8rem;
-  width: 2.3rem;
-  height: 2.3rem;
+  font-size: 1.5rem; /* Reduce from 1.8rem to 1.5rem */
+  width: 100%;
+  height: 1.8rem;
   animation: pulse 2s ease-in-out infinite alternate;
 }
 
