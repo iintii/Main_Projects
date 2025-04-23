@@ -1,0 +1,4 @@
+if 3 < 5 then 
+    x := 1 
+else 
+    x := 0

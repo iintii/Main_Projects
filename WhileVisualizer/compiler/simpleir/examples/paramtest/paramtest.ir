@@ -1,0 +1,13 @@
+function paramtest
+localVariables x a b c d e f g h
+parameters a b c d e f g h
+x := a
+x := x + b
+x := x + c
+x := x + d
+x := x + e
+x := x + f
+x := x + g
+x := x + h
+return x
+end function

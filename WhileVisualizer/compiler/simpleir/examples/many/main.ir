@@ -1,0 +1,8 @@
+function main
+localVariables argc argv x a b
+parameters argc argv
+a := 1
+b := 2
+x := call many a b
+return x
+end function

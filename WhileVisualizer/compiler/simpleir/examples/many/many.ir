@@ -1,0 +1,21 @@
+function many
+localVariables a b x y t1 t2 t3
+parameters a b
+x := a
+t1 := x - b
+if t1 < 0 goto lessthan
+x := 0
+goto exit
+lessthan:
+x := 1
+exit:
+y := &x
+t2 := *y
+t3 := 3
+t2 := t2 + t3
+*y := t2
+t2 := *y
+x := x + t2
+t2 := call print_int x
+return x
+end function

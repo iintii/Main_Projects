@@ -1,0 +1,6 @@
+begin
+    int x;
+    x := 5;
+    int y;
+    y := x + false
+end

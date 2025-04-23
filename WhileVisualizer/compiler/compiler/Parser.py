@@ -1,0 +1,131 @@
+import sys
+from antlr4 import *
+sys.path.append('./')  # if you want to avoid PYTHONPATH
+from grammar.WhileLexer import WhileLexer
+from grammar.WhileParser import WhileParser
+from grammar.WhileVisitor import WhileVisitor
+import logging
+from textwrap import indent, dedent
+
+class Printer(WhileVisitor):
+
+    def __init__(self):
+        self.indent_depth = 0
+        self.indent_space = "    "
+    
+    def getIndent(self):
+        return self.indent_depth * self.indent_space if self.indent_depth > 0 else ""
+
+
+    def indent(self, txt):
+        return indent(txt, ' '*self.indent_depth) #Use the indent function to add a gap depending on the size of the depth we need
+    
+    # Visit a parse tree produced by WhileParser#Assignment.
+    def visitAssignment(self, ctx:WhileParser.AssignmentContext):
+        return self.getIndent() + ctx.getText()
+
+    # Visit a parse tree produced by WhileParser#Skip.
+    def visitSkip(self, ctx:WhileParser.SkipContext):
+        return f'{self.getIndent()}skip'
+
+    # Visit a parse tree produced by WhileParser#If.
+    def visitIf(self, ctx:WhileParser.IfContext):
+        bool_condition = self.visit(ctx.b())
+        self.indent_depth += 1
+        then_statement = self.visit(ctx.s(0))
+        self.indent_depth -= 1
+        else_statement = ""
+        if ctx.s(1):
+            self.indent_depth += 1
+            else_statement = self.visit(ctx.s(1))
+            self.indent_depth -= 1
+
+        result = f"{self.getIndent()}if {bool_condition} then\n{then_statement}"
+        if else_statement:
+            result += f"\n{self.getIndent()}else\n{else_statement}"
+        return result
+
+    def visitWhile(self, ctx:WhileParser.WhileContext):
+        bool_cond = self.visit(ctx.b())
+        self.indent_depth += 1
+        while_body = self.visit(ctx.s())
+        self.indent_depth -= 1
+        return f"{self.getIndent()}while {bool_cond} do\n{while_body}"
+
+    def visitCompound(self, ctx:WhileParser.CompoundContext):
+        result = self.getIndent() + 'begin\n'
+        self.indent_depth += 1
+        statements = ctx.s()
+        
+        for i, statement in enumerate(statements):
+            stmt = self.visit(statement)
+            if stmt:
+                result += stmt + ";\n"
+                if  i == len(statements) - 1:
+                    result += "\n"
+            else: print(f"visit({statement.getText()}) returned None")
+            
+        self.indent_depth -= 1
+        return result
+
+    # Visit a parse tree produced by WhileParser#ROp.
+    def visitROp(self, ctx:WhileParser.ROpContext):
+        return f'{self.visit(ctx.a(0))} {ctx.op.text} {self.visit(ctx.a(1))}'
+
+
+    # Visit a parse tree produced by WhileParser#Or.
+    def visitOr(self, ctx:WhileParser.OrContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by WhileParser#And.
+    def visitAnd(self, ctx:WhileParser.AndContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by WhileParser#True.
+    def visitTrue(self, ctx:WhileParser.TrueContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by WhileParser#False.
+    def visitFalse(self, ctx:WhileParser.FalseContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by WhileParser#BParen.
+    def visitBParen(self, ctx:WhileParser.BParenContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by WhileParser#AOp.
+    def visitAOp(self, ctx:WhileParser.AOpContext):
+        return f'{self.visit(ctx.a(0))} {ctx.op.text} {self.visit(ctx.a(1))}'
+
+
+    # Visit a parse tree produced by WhileParser#Var.
+    def visitVar(self, ctx:WhileParser.VarContext):
+        
+        return ctx.ID().getText()
+
+
+    # Visit a parse tree produced by WhileParser#Num.
+    def visitNum(self, ctx:WhileParser.NumContext):
+        return ctx.NUM().getText()
+
+
+    # Visit a parse tree produced by WhileParser#AParen.
+    def visitAParen(self, ctx:WhileParser.AParenContext):
+        return self.visitChildren(ctx)
+
+input_stream = StdinStream()
+lexer = WhileLexer(input_stream)
+stream = CommonTokenStream(lexer)
+parser = WhileParser(stream)
+tree = parser.s()
+if parser.getNumberOfSyntaxErrors() > 0:
+  print("syntax errors")
+  exit(1)
+printer = Printer()
+output = printer.visit(tree)
+print(output)

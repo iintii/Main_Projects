@@ -1,0 +1,12 @@
+function main
+localVariables a b x y t1 t2 t3 t4 t5
+parameters a b
+x := 9
+y := 4
+t1 := x + y
+t2 := x - y
+t3 := x * y
+t4 := x / y
+t5 := x % y
+return x
+end function

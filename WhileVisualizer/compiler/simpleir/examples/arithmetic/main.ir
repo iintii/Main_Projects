@@ -1,0 +1,10 @@
+function main
+localVariables argc argv x
+parameters argc argv
+x := 1 + 2
+x := x * 6
+x := x - 1
+x := x % 10
+x := x / 3
+return x
+end function

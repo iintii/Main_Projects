@@ -1,0 +1,11 @@
+begin
+    x := 30;
+    if x = 30 then 
+        begin
+            y := 1;
+            while y < 5 do 
+                y := y + 1
+        end
+    else 
+        x := 0
+end

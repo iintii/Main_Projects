@@ -1,0 +1,9 @@
+function main
+localVariables argc argv size x y
+parameters argc argv
+size := 8 * 4
+x := call malloc size
+*x := 10
+y := *x
+return y
+end function

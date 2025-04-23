@@ -1,0 +1,7 @@
+function main
+localVariables argc argv x y
+parameters argc argv
+x := 5
+y := call factorial x
+return y
+end function

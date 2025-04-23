@@ -1,0 +1,6 @@
+x := 7
+y := 3*7
+
+if x<y then x := y
+else y := x
+
