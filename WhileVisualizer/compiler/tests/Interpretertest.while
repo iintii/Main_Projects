@@ -1,0 +1,8 @@
+begin
+    x := 5;
+    y := x + 2;
+    if y > 6 then
+        z := 1
+    else
+        z := 0
+end

@@ -1,0 +1,13 @@
+function factorial
+localVariables x retval nextx nextval
+parameters x
+if x > 1 goto recurse
+retval := 1
+goto exit
+recurse:
+nextx := x - 1
+nextval := call factorial nextx
+retval := x * nextval
+exit:
+return retval
+end function

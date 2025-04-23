@@ -1,0 +1,4 @@
+begin if x > 7 then
+              begin x:= x + 1; y := y + 1 ; while x < 7 do x := x + 1 end else skip
+
+end

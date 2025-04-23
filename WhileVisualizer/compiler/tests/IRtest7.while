@@ -1,0 +1,4 @@
+begin
+    if true and false then x := 2 else x := 3;
+    if true or false then y := 4 else y := 5
+end

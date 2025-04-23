@@ -1,0 +1,9 @@
+y := 0
+x := 10
+
+while x do 
+	x := x - 1
+	y := y + 1
+print x
+print y
+

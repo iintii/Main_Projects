@@ -1,0 +1,70 @@
+// Test Case 1: Valid int declaration
+int x
+
+// Test Case 2: Valid bool declaration
+bool flag
+
+// Test Case 3: Valid compound statement with assignment
+begin
+    int x;
+    x := 5
+end
+
+// Test Case 4: Valid compound statement with an if statement
+begin
+    int x;
+    x := 5;
+    int y;
+    y := x + 2;
+    if y > 6 then
+        begin
+            bool z;
+            z := true
+        end
+    else
+        begin
+            bool z;
+            z := false
+        end
+end
+
+// Test Case 5: Valid while loop
+begin
+    int x;
+    x := 5;
+    while x > 0 do
+        x := x - 1
+end
+
+// Test Case 6: Redeclaration error (should fail)
+begin
+    int x;
+    int x
+end
+
+// Test Case 7: Undeclared variable assignment error (should fail)
+begin
+    x := 5
+end
+
+// Test Case 8: Assignment type error (assigning boolean to an int, should fail)
+begin
+    int x;
+    x := true
+end
+
+// Test Case 9: Expression type error (mixing int and bool in a binary operation, should fail)
+begin
+    int x;
+    x := 5;
+    int y;
+    y := x + false
+end
+
+// Test Case 10: Valid use of not operator and parentheses with boolean expressions
+begin
+    bool a;
+    a := not false;
+    bool b;
+    b := (true and a)
+end

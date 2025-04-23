@@ -1,0 +1,101 @@
+import sys
+from antlr4 import *
+sys.path.append('./')  # if you want to avoid PYTHONPATH
+from grammar.WhileLexer import WhileLexer
+from grammar.WhileParser import WhileParser
+from grammar.WhileVisitor import WhileVisitor
+import logging
+from textwrap import indent, dedent
+
+class Printer(WhileVisitor):
+
+# Visit a parse tree produced by WhileParser#Assignment.
+    def visitAssignment(self, ctx:WhileParser.AssignmentContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by WhileParser#Skip.
+    def visitSkip(self, ctx:WhileParser.SkipContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by WhileParser#If.
+    def visitIf(self, ctx:WhileParser.IfContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by WhileParser#While.
+    def visitWhile(self, ctx:WhileParser.WhileContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by WhileParser#Compound.
+    def visitCompound(self, ctx:WhileParser.CompoundContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by WhileParser#Not.
+    def visitNot(self, ctx:WhileParser.NotContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by WhileParser#ROp.
+    def visitROp(self, ctx:WhileParser.ROpContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by WhileParser#Or.
+    def visitOr(self, ctx:WhileParser.OrContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by WhileParser#And.
+    def visitAnd(self, ctx:WhileParser.AndContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by WhileParser#True.
+    def visitTrue(self, ctx:WhileParser.TrueContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by WhileParser#False.
+    def visitFalse(self, ctx:WhileParser.FalseContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by WhileParser#BParen.
+    def visitBParen(self, ctx:WhileParser.BParenContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by WhileParser#AOp.
+    def visitAOp(self, ctx:WhileParser.AOpContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by WhileParser#Var.
+    def visitVar(self, ctx:WhileParser.VarContext):
+        print(ctx.ID())
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by WhileParser#Num.
+    def visitNum(self, ctx:WhileParser.NumContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by WhileParser#AParen.
+    def visitAParen(self, ctx:WhileParser.AParenContext):
+        return self.visitChildren(ctx)
+
+input_stream = StdinStream()
+lexer = WhileLexer(input_stream)
+stream = CommonTokenStream(lexer)
+parser = WhileParser(stream)
+tree = parser.s()
+if parser.getNumberOfSyntaxErrors() > 0:
+  print("syntax errors")
+  exit(1)
+printer = Printer()
+printer.visit(tree)

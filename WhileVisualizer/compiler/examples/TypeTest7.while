@@ -1,0 +1,6 @@
+begin
+    bool a;
+    a := not false;
+    bool b;
+    b := (true and a)
+end

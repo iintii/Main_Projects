@@ -1,0 +1,16 @@
+begin
+    int x;
+    x := 5;
+    int y;
+    y := x + 2;
+    if y > 6 then
+        begin
+            bool z;
+            z := true
+        end
+    else
+        begin
+            bool z;
+            z := false
+        end
+end

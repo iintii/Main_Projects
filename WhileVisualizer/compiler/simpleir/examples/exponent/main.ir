@@ -1,0 +1,9 @@
+function main
+localVariables argc argv x y result retval
+parameters argc argv
+x := 2
+y := call read_int
+result := call exponent x y
+retval := call print_int result
+return result
+end function

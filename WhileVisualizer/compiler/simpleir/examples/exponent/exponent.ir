@@ -1,0 +1,12 @@
+function exponent
+localVariables base exp result
+parameters base exp
+result := 1
+top:
+if exp <= 0 goto exit
+result := result * base
+exp := exp - 1
+goto top
+exit:
+return result
+end function
