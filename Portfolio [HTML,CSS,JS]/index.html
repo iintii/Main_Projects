@@ -199,6 +199,21 @@
                   <div class="project-carousel-container">
                     <!-- Project 1 -->
                     <div class="project-item active">
+                      <div class="project-icon">
+                        <i class="fa-sharp fa-solid fa-code-compare"></i>
+                      </div>
+                      <div class="project-title-container">
+                        <h3 class="project-title">WhileVisualizer</h3>
+                        <a href="https://github.com/iintii/Main_Projects/tree/main/WhileVisualizer" class="github-btn" target="_blank">
+                          <i class="fab fa-github"></i>
+                        </a>
+                        <button class="play-btn" title="Play Demo"><i class="fas fa-play"></i></button>
+                      </div>
+                      <p class="project-description">Custom language compiler and interactive GUI built from scratch, visualizing the intricacies of the inner workings of a compiler.</p>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="project-item">
                       <div class="project-icon"><i class="fa-duotone fa-solid fa-person-running" style="font-size: 200px;"></i>
                       </div>
                       <div class="project-title-container">
@@ -206,11 +221,12 @@
                         <a href="https://github.com/iintii/Main_Projects/tree/main/Game.Dapr_Dash" class="github-btn" target="_blank">
                           <i class="fab fa-github"></i>
                         </a>
+                        <button class="play-btn" title="Play Demo"><i class="fas fa-play"></i></button>
                       </div>
                       <p class="project-description">2D platformer to showcase core C++ concepts such as encapsulation with custom structs, vector container management, and memory-efficient resource handling.</p>
                     </div>
                     
-                    <!-- Project 2 -->
+                    <!-- Project 3 -->
                     <div class="project-item">
                       <div class="project-icon">
                         <!-- Icon placeholder -->
@@ -225,7 +241,7 @@
                       <p class="project-description">Advanced image classification system leveraging deep Convolutional Neural Networks with TensorFlow and Keras Tuner, using Bayesian optimization.</p>
                     </div>
                     
-                    <!-- Project 3 -->
+                    <!-- Project 4 -->
                     <div class="project-item">
                       <div class="project-icon">
                         <!-- Icon placeholder -->
@@ -240,7 +256,7 @@
                       <p class="project-description">Advanced CPU architecture simulator implementing Bimodal, GShare, Hybrid, and Smith n-bit algorithms with real-time ASCII visualization.</p>
                     </div>
                     
-                    <!-- Project 4 -->
+                    <!-- Project 5 -->
                     <div class="project-item">
                       <div class="project-icon">
                         <i class="fa-sharp fa-solid fa-folder-tree"></i>
@@ -254,7 +270,7 @@
                       <p class="project-description">A portfolio website built with vanilla HTML5, CSS3, and JavaScript, featuring advanced DOM manipulation, CSS keyframe animations, and dynamic content rendering.</p>
                     </div>
                     
-                    <!-- Project 5 -->
+                    <!-- Project 6 -->
                     <div class="project-item">
                       <div class="project-icon">
                         <i class="fa-sharp-duotone fa-solid fa-heart-crack"></i>
@@ -268,7 +284,7 @@
                       <p class="project-description">Advanced stroke prediction system implementing Random Forest, Gradient Boosting and Voting Classifiers with Bayesian hyperparameter optimization.</p>
                     </div>
                     
-                    <!-- Project 6 -->
+                    <!-- Project 7 -->
                     <div class="project-item">
                       <div class="project-icon">
                         <i class="fa-sharp fa-solid fa-robot"></i>
@@ -282,7 +298,7 @@
                       <p class="project-description">Automated content aggregation system built with PRAW API integration that securely authenticates with OAuth2 and scrapes targeted data across multiple subreddits.</p>
                     </div>
                     
-                    <!-- Project 7 -->
+                    <!-- Project 8 -->
                     <div class="project-item">
                       <div class="project-icon">
                         <i class="fa-sharp fa-solid fa-plane-arrival"></i>
@@ -294,20 +310,6 @@
                         </a>
                       </div>
                       <p class="project-description">Sentiment analysis platform built in R using NRC lexicon for airline feedback classification with topic modeling algorithms and real-time Shiny visualizations.</p>
-                    </div>
-                    
-                    <!-- Project 8 -->
-                    <div class="project-item">
-                      <div class="project-icon">
-                        <i class="fa-sharp fa-solid fa-code-compare"></i>
-                      </div>
-                      <div class="project-title-container">
-                        <h3 class="project-title">A Compiler from Scratch</h3>
-                        <a href="https://github.com/iintii/Main_Projects/tree/main/C_Compiler_Scratch" class="github-btn" target="_blank">
-                          <i class="fab fa-github"></i>
-                        </a>
-                      </div>
-                      <p class="project-description">Custom language compiler built from scratch,  implementing lexical analysis, recursive descent parsing, and C code generation.</p>
                     </div>
                   </div>
                   
@@ -368,6 +370,25 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- Video Modal for WhileVisualizer Demo (moved inside .container for centering) -->
+      <div id="whileVisualizerModal" class="video-modal">
+        <div class="video-modal-content">
+          <span class="video-modal-close">&times;</span>
+          <video id="whileVisualizerVideo" controls>
+            <source src="imgs/whilevisualizer-demo-fixed.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <!-- GIF Modal for Dapr Dash Demo -->
+      <div id="daprDashModal" class="gif-modal">
+        <div class="gif-modal-content">
+          <span class="gif-modal-close">&times;</span>
+          <img id="daprDashGif" src="imgs/dasherGIF.gif" alt="Dapr Dash Demo GIF" />
         </div>
       </div>
 

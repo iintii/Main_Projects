@@ -179,4 +179,82 @@ document.addEventListener("DOMContentLoaded", function () {
       }, 2000);
     });
   };
+
+  // Play button for WhileVisualizer video demo
+  document.querySelectorAll('.play-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      // Only trigger for WhileVisualizer (first project-item)
+      const projectTitle = btn.closest('.project-title-container')?.querySelector('.project-title');
+      if (projectTitle && projectTitle.textContent.trim() === "WhileVisualizer") {
+        const modal = document.getElementById('whileVisualizerModal');
+        const video = document.getElementById('whileVisualizerVideo');
+        if (modal && video) {
+          modal.style.display = 'flex';
+          video.currentTime = 0;
+          video.play();
+        }
+      }
+    });
+  });
+
+  // Modal close logic
+  const closeModalBtn = document.querySelector('.video-modal-close');
+  if (closeModalBtn) {
+    closeModalBtn.onclick = function() {
+      const modal = document.getElementById('whileVisualizerModal');
+      const video = document.getElementById('whileVisualizerVideo');
+      if (modal && video) {
+        modal.style.display = 'none';
+        video.pause();
+        video.currentTime = 0;
+      }
+    };
+  }
+  // Close modal when clicking outside the video
+  const whileVisualizerModal = document.getElementById('whileVisualizerModal');
+  if (whileVisualizerModal) {
+    whileVisualizerModal.onclick = function(e) {
+      if (e.target === this) {
+        this.style.display = 'none';
+        const video = document.getElementById('whileVisualizerVideo');
+        if (video) {
+          video.pause();
+          video.currentTime = 0;
+        }
+      }
+    };
+  }
+
+  // Play button for Dapr Dash GIF demo
+  document.querySelectorAll('.play-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const projectTitle = btn.closest('.project-title-container')?.querySelector('.project-title');
+      if (projectTitle && projectTitle.textContent.trim() === "Dapr Dash") {
+        const modal = document.getElementById('daprDashModal');
+        if (modal) {
+          modal.style.display = 'flex';
+        }
+      }
+    });
+  });
+
+  // Modal close logic for Dapr Dash GIF
+  const closeGifModalBtn = document.querySelector('.gif-modal-close');
+  if (closeGifModalBtn) {
+    closeGifModalBtn.onclick = function() {
+      const modal = document.getElementById('daprDashModal');
+      if (modal) {
+        modal.style.display = 'none';
+      }
+    };
+  }
+  // Close GIF modal when clicking outside the image
+  const daprDashModal = document.getElementById('daprDashModal');
+  if (daprDashModal) {
+    daprDashModal.onclick = function(e) {
+      if (e.target === this) {
+        this.style.display = 'none';
+      }
+    };
+  }
 });
