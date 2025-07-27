@@ -963,6 +963,52 @@ body {
   margin-right: 0px;
 }
 
+.github-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(56, 239, 125, 0.6);
+  background: #111111;
+  color: #38ef7d;
+  border-color: #11998e;
+}
+
+.github-btn i {
+  filter: drop-shadow(0 0 3px rgba(17, 153, 142, 0.5));
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.website-btn {
+  position: relative;
+  top: 30%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(17, 153, 142, 0.3);
+  margin-left: 0px;
+}
+
+.website-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(56, 239, 125, 0.6);
+  background: linear-gradient(135deg, #38ef7d, #11998e);
+  border-color: #11998e;
+}
+
+.website-btn i {
+  filter: drop-shadow(0 0 3px rgba(17, 153, 142, 0.5));
+  font-size: 1.2rem;
+  color: #fff;
+}
+
 .play-btn {
   position: relative;
   top: 30%;
