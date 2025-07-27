@@ -1,0 +1,228 @@
+/* Pastel Lighthearted Recipe Page Theme */
+
+:root {
+  --pastel-bg: #fdf6f0;
+  --pastel-main: #fff8ee;
+  --pastel-accent: #ffe5ec;
+  --pastel-header: #b8c6db;
+  --pastel-pink: #ffb3c6;
+  --pastel-yellow: #fff5ba;
+  --pastel-green: #baffc9;
+  --pastel-blue: #bae1ff;
+  --pastel-purple: #e0bbff;
+  --pastel-text: #4b4b4b;
+  --pastel-shadow: #e0e0e0;
+}
+
+body {
+  background: #f6f6f6;
+  color: #222;
+  font-family: "Georgia", "Quicksand", "Segoe UI", "Roboto", "Arial", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+header {
+  background: #fff;
+  color: #222;
+  padding: 2.5rem 0 1.2rem 0;
+  text-align: center;
+  font-size: 2.5rem;
+  letter-spacing: 1.5px;
+  font-weight: 400;
+  font-family: "Dancing Script", cursive, "Georgia", serif;
+  box-shadow: none;
+  border-bottom: 2px solid #eee;
+  max-width: 700px;
+  margin: 0 auto;
+  background-image: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80");
+  background-size: cover;
+  background-position: center center;
+  border-radius: 0px 0 18px 18px;
+  position: relative;
+}
+
+header span {
+  display: flex;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 0.5rem 1.5rem 0.5rem 2rem;
+  border-radius: 18px 18px 18px 18px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  position: relative;
+  top: -0.9rem; /* Move up over the background image */
+
+  font-size: 2.2rem;
+  font-family: "Dancing Script", cursive, "Georgia", serif;
+  font-weight: 700;
+  box-shadow: 0 2px 8px 0 #0001;
+}
+
+main {
+  max-width: 500px;
+  margin: 2.5rem auto;
+  background: var(--pastel-main);
+  border-radius: 24px;
+  box-shadow: 0 4px 24px 0 var(--pastel-text);
+  padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+}
+
+.form-container,
+.ready-container,
+.reply-container {
+  max-width: 700px;
+  margin: 2rem auto 0 auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 #0001;
+  padding: 2rem 2.5rem 2.5rem 2.5rem;
+}
+
+.form-container {
+  margin-top: 2.5rem;
+  border-bottom: 2px solid #eee;
+}
+
+form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 0.8rem 1.1rem;
+  border-radius: 8px;
+  border: 1.5px solid #e0e0e0;
+  background: #faf9f6;
+  color: #222;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: 0 2px 8px 0 #eee2;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+input[type="text"]:focus {
+  border: 1.5px solid #b8c6db;
+  box-shadow: 0 2px 12px 0 #b8c6db44;
+}
+
+button {
+  background: #f7c873;
+  color: #222;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 #ffe5ec44;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  background: #f3b04e;
+  color: #fff;
+  box-shadow: 0 4px 16px 0 #f7c87344;
+}
+
+.ready-container {
+  background: #f7f6f2;
+  border: none;
+  box-shadow: none;
+  padding: 1.5rem 2rem 1.5rem 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  color: #2d4a3a;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.reply-container {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 #0001;
+  padding: 2rem 2.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.reply-container h2 {
+  font-family: "Dancing Script", cursive, "Georgia", serif;
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #b88946;
+}
+
+.reply-container ul,
+.reply-container ol {
+  margin: 0 0 0 1.5rem;
+  padding: 0;
+}
+
+.reply-container li {
+  background: none;
+  color: #222;
+  margin-bottom: 0.5rem;
+  padding: 0;
+  border-radius: 0;
+  font-size: 1.1rem;
+  box-shadow: none;
+  border-left: none;
+  display: list-item;
+  align-items: start;
+  gap: 0;
+}
+
+.reply-container strong {
+  color: #b88946;
+}
+
+.reply-container em {
+  color: #b8c6db;
+}
+
+.reply-container img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin: 1rem 0;
+  box-shadow: 0 2px 12px 0 #0002;
+}
+
+@media (max-width: 800px) {
+  .form-container,
+  .ready-container,
+  .reply-container,
+  header {
+    max-width: 98vw;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 0.5rem;
+  }
+  form {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  header {
+    font-size: 1.5rem;
+    padding: 1.2rem 0 0.7rem 0;
+  }
+}
+
+.ready-recipe {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.ready-recipe span {
+  margin-bottom: 0.7rem;
+}

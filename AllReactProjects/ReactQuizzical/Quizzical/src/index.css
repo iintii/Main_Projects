@@ -1,0 +1,219 @@
+/* Quizzical Theme Reset */
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #fdf0e6; /* Light peachy white */
+  --card-bg: #ffffff;
+  --text: #3a3a3a;
+  --subtext: #757575;
+  --primary: #ff7b54; /* Coral */
+  --primary-dark: #ff5722;
+  --secondary: #00bcd4; /* Teal */
+  --correct: #c8e6c9; /* Soft Green */
+  --correct-border: #4caf50;
+  --incorrect: #ffcdd2; /* Soft Red */
+  --incorrect-border: #f44336;
+  --option-bg: #f5f5f5;
+  --option-hover: #e0e0fe;
+  --option-selected: #ffeadb; /* Light Coral */
+  --option-selected-border: #ff7b54;
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg);
+  /* Add a subtle pattern */
+  background-image: radial-gradient(var(--subtext) 1px, transparent 1px),
+    radial-gradient(var(--subtext) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  font-family: "Nunito Sans", "Segoe UI", Arial, sans-serif;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  letter-spacing: 0.01em;
+  overflow: hidden; /* Hide blob overflow */
+}
+
+/* Decorative blobs */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  border-radius: 50%;
+  filter: blur(70px); /* Softer blur */
+  opacity: 0.5; /* A bit more visible */
+}
+body::before {
+  width: 350px;
+  height: 350px;
+  background: var(--primary);
+  top: -150px;
+  right: -150px;
+}
+body::after {
+  width: 280px;
+  height: 280px;
+  background: var(--secondary);
+  left: -120px;
+  bottom: -120px;
+}
+
+main {
+  background: var(--card-bg);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 2.5rem 2rem 2rem 2rem;
+  max-width: 700px;
+  width: 100%;
+  margin: 2rem auto;
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  font-family: "Nunito Sans", "Segoe UI", Arial, sans-serif;
+  font-size: 2.3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: var(--primary-dark);
+  letter-spacing: 0.01em;
+}
+
+p {
+  text-align: center;
+  color: var(--subtext);
+  margin-bottom: 2rem;
+  font-family: "Nunito Sans", "Segoe UI", Arial, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Question Card */
+article {
+  margin-bottom: 2rem;
+  background: transparent;
+  /* Remove border and padding for elegance */
+  border: none !important;
+  padding-bottom: 0;
+}
+article:last-child {
+  border: none !important;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+article h2 {
+  font-family: "Nunito Sans", "Segoe UI", Arial, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text);
+  letter-spacing: 0.01em;
+}
+
+/* Option Pills */
+label.option {
+  display: inline-block;
+  background: var(--option-bg);
+  border: 1.5px solid #d1d9e6;
+  border-radius: 999px;
+  padding: 0.45rem 1.2rem;
+  margin: 0.25rem 0.5rem 0.5rem 0;
+  cursor: pointer;
+  font-size: 1.05rem;
+  color: var(--text);
+  transition: background 0.18s, border 0.18s, color 0.18s;
+  box-shadow: 0 1px 2px rgba(60, 80, 120, 0.04);
+  position: relative;
+  font-family: "Nunito Sans", "Segoe UI", Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+label.option:hover {
+  background: var(--option-hover);
+}
+input[type="radio"] {
+  display: none;
+}
+label.option-selected {
+  background: var(--option-selected);
+  border-color: var(--option-selected-border);
+  color: var(--primary-dark);
+}
+label.option-correct {
+  background: var(--correct) !important;
+  border-color: var(--correct-border) !important;
+  color: #1b5e20 !important;
+}
+label.option-incorrect {
+  background: var(--incorrect) !important;
+  border-color: var(--incorrect-border) !important;
+  color: #8e0038 !important;
+}
+
+/* Buttons */
+button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8em 2.2em;
+  font-size: 1.1rem;
+  font-family: "Nunito Sans", "Segoe UI", Arial, sans-serif;
+  font-weight: 700;
+  margin: 1.2rem auto 0 auto;
+  display: block;
+  box-shadow: 0 2px 8px rgba(60, 80, 120, 0.08);
+  cursor: pointer;
+  transition: background 0.18s;
+  letter-spacing: 0.01em;
+  text-decoration: none !important;
+}
+button:hover,
+button:focus {
+  background: var(--primary-dark);
+  text-decoration: none !important;
+}
+
+/* Score/Result */
+.score {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  color: var(--primary-dark);
+  font-family: "Nunito Sans", "Segoe UI", Arial, sans-serif;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  main {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+    max-width: 98vw;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  article h2 {
+    font-size: 1rem;
+  }
+  label.option {
+    font-size: 0.95rem;
+    padding: 0.4rem 0.8rem;
+  }
+}

@@ -1,0 +1,165 @@
+body {
+  background: #181824;
+  color: #f4f4f4;
+  font-family: "Comic Sans MS", "Comic Sans", "Chalkboard SE", "Comic Neue",
+    cursive, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  background: #23243a;
+  border-radius: 24px;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.667);
+  padding: 2.5rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  min-width: 340px;
+}
+
+.tenzies-title {
+  font-family: "Comic Sans MS", "Comic Sans", "Chalkboard SE", "Comic Neue",
+    cursive, sans-serif;
+  font-size: 3rem;
+  color: #ffb703;
+  text-shadow: 2px 2px 0 #fff, 4px 4px 0 #59e391;
+  margin-bottom: 0.2em;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.roll-count {
+  font-size: 2rem;
+  color: #ffb703;
+  font-family: "Comic Sans MS", "Comic Sans", "Chalkboard SE", "Comic Neue",
+    cursive, sans-serif;
+  margin: 0.5em 0 0.2em 0;
+  text-align: center;
+}
+
+.tenzies-desc {
+  font-size: 1.1rem;
+  color: #f4f4f4;
+  background: #23243a;
+  border-radius: 10px;
+  padding: 0.7em 1.2em;
+  margin: 0.5em 0 0 0;
+  font-family: inherit;
+  text-align: center;
+  box-shadow: 0 2px 8px #000;
+}
+
+.dice-container {
+  display: grid;
+  grid-template-columns: repeat(5, 48px);
+  grid-gap: 18px;
+  margin-bottom: 1.5rem;
+}
+
+.die-btn {
+  font-family: "Comic Sans MS", "Comic Sans", "Chalkboard SE", "Comic Neue",
+    cursive, sans-serif;
+  font-size: 2rem;
+  background: #23243a;
+  color: #ffb703;
+  border: 2.5px solid #ffb703;
+  box-shadow: 0 2px 8px #0003;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, border 0.2s;
+}
+
+.die-btn.held {
+  background: #59e391;
+  color: #23243a;
+  border: 2.5px solid #59e391;
+  box-shadow: 0 2px 16px #59e39155;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: 2px;
+  color: #f4f4f4;
+}
+
+button.roll-btn,
+.reset-btn {
+  font-family: "Comic Sans MS", "Comic Sans", "Chalkboard SE", "Comic Neue",
+    cursive, sans-serif;
+  font-size: 1.3rem;
+  border: 2.5px solid #ffb703;
+  background: #23243a;
+  color: #ffb703;
+  box-shadow: 0 2px 8px #0003;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, border 0.2s;
+  min-width: 120px;
+  height: 48px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 2.5rem;
+  margin: 0;
+}
+
+button.roll-btn:hover,
+.reset-btn:hover {
+  background: #59e391;
+  color: #23243a;
+  border: 2.5px solid #59e391;
+  box-shadow: 0 2px 16px #59e39155;
+}
+
+.reset-btn {
+  background: #181824;
+  color: #ffb703;
+  border: 2.5px solid #ffb703;
+}
+
+.reset-btn:hover {
+  background: #59e391;
+  color: #23243a;
+  border: 2.5px solid #59e391;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 500px) {
+  main {
+    min-width: unset;
+    padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+  }
+  .dice-container {
+    grid-template-columns: repeat(5, 36px);
+    grid-gap: 10px;
+  }
+  .die-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+  }
+  .button-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .roll-btn,
+  .reset-btn {
+    min-width: 90px;
+    height: 36px;
+    font-size: 1rem;
+    border-radius: 8px;
+  }
+}
