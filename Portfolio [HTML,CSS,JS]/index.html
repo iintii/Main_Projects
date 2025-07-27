@@ -18,13 +18,14 @@
   <body>
     <div class="container">
       <div class="slide">
-        <!-- Landing page (Welcome to Portfolio) -->
         <div
           class="item"
-          style="background-image: url(./imgs/port1.jpg); background-position: 0% 80%"
+          style="
+            background-image: url(./imgs/port1.jpg);
+            background-position: 0% 80%;
+          "
         >
           <div class="content">
-            <div class="name"></div>
             <div class="welcome">Welcome to my Portfolio!</div>
             <div class="desc-container">
               <section id="profile">
@@ -37,25 +38,242 @@
                   <p class="section__text__p2">A Software Developer</p>
                   <p class="section__text__p3">Lets get to work!</p>
                   <div class="btn-container">
-                    <!-- Download Resume button removed -->
-                    <button 
-                      class="btn btn-color-1" 
+                    <button
+                      class="btn btn-color-1"
                       onclick="goToContactSlide()"
                     >
                       Contact Info
                     </button>
                   </div>
-                  <!-- Removing socials-container div entirely -->
                 </div>
               </section>
             </div>
           </div>
         </div>
 
-        <!-- Experience page -->
         <div
           class="item"
-          style="background-image: url(./imgs/port2.jpg); background-position: 0% 75%"
+          style="
+            background-image: url(./imgs/port2.jpg);
+            background-position: 0% 60%;
+          "
+        >
+          <div class="content">
+            <div class="name">Certificates</div>
+            <div class="desc-container">
+              <div class="certificates-container">
+                <h2 class="experience-sub-title">
+                  Professional Certifications
+                </h2>
+                <div class="certificates-grid">
+                  <!-- IBM Full Stack Certificate -->
+                  <div
+                    class="certificate-card"
+                    onclick="window.open('./certificates/Coursera_FullStack.pdf', '_blank')"
+                  >
+                    <div class="cert-header">
+                      <img
+                        src="https://logos-world.net/wp-content/uploads/2020/09/IBM-Logo.png"
+                        alt="IBM Logo"
+                        class="cert-logo"
+                      />
+                      <div class="cert-issuer">IBM</div>
+                    </div>
+                    <div class="cert-content">
+                      <h3 class="cert-title">Full Stack Software Developer</h3>
+                      <div class="cert-skills">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Docker</span>
+                      </div>
+                    </div>
+                    <div class="cert-footer">
+                      <i class="fas fa-external-link-alt"></i>
+                      <span>View Certificate</span>
+                    </div>
+                  </div>
+
+                  <!-- Machine Learning Certificate -->
+                  <div
+                    class="certificate-card"
+                    onclick="window.open('https://www.coursera.org/account/accomplishments/specialization/JAH88L6EGE37?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=s12n', '_blank')"
+                  >
+                    <div class="cert-header">
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/9/97/Coursera-Logo_600x600.svg"
+                        alt="Coursera Logo"
+                        class="cert-logo"
+                      />
+                      <div class="cert-issuer">Stanford/Coursera</div>
+                    </div>
+                    <div class="cert-content">
+                      <h3 class="cert-title">
+                        Machine Learning Specialization
+                      </h3>
+                      <div class="cert-skills">
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">PyTorch</span>
+                      </div>
+                    </div>
+                    <div class="cert-footer">
+                      <i class="fas fa-external-link-alt"></i>
+                      <span>View Certificate</span>
+                    </div>
+                  </div>
+
+                  <!-- React Certificate from Scrimba -->
+                  <div
+                    class="certificate-card"
+                    onclick="window.open('./certificates/Learn%20React.pdf', '_blank')"
+                  >
+                    <div class="cert-header">
+                      <img
+                        src="https://avatars.githubusercontent.com/u/29487484?s=200&v=4"
+                        alt="Scrimba Logo"
+                        class="cert-logo"
+                      />
+                      <div class="cert-issuer">Scrimba</div>
+                    </div>
+                    <div class="cert-content">
+                      <h3 class="cert-title">React Development</h3>
+                      <div class="cert-skills">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">JSX</span>
+                        <span class="skill-tag">Hooks</span>
+                        <span class="skill-tag">Components</span>
+                      </div>
+                    </div>
+                    <div class="cert-footer">
+                      <i class="fas fa-external-link-alt"></i>
+                      <span>View Certificate</span>
+                    </div>
+                  </div>
+
+                  <!-- Google Data Analytics Certificate -->
+                  <div
+                    class="certificate-card"
+                    onclick="window.open('https://www.credly.com/badges/1e492a45-9032-40e6-9257-d062ef885e15/linked_in_profile', '_blank')"
+                  >
+                    <div class="cert-header">
+                      <img
+                        src="https://logos-world.net/wp-content/uploads/2020/09/Google-Logo.png"
+                        alt="Google Logo"
+                        class="cert-logo"
+                      />
+                      <div class="cert-issuer">Google</div>
+                    </div>
+                    <div class="cert-content">
+                      <h3 class="cert-title">Data Analytics</h3>
+                      <div class="cert-skills">
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">R</span>
+                        <span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">Python</span>
+                      </div>
+                    </div>
+                    <div class="cert-footer">
+                      <i class="fas fa-external-link-alt"></i>
+                      <span>View Certificate</span>
+                    </div>
+                  </div>
+
+                  <!-- Next.js Certificate from Scrimba -->
+                  <div
+                    class="certificate-card"
+                    onclick="window.open('./certificates/Learn%20Next.js.pdf', '_blank')"
+                  >
+                    <div class="cert-header">
+                      <img
+                        src="https://avatars.githubusercontent.com/u/29487484?s=200&v=4"
+                        alt="Scrimba Logo"
+                        class="cert-logo"
+                      />
+                      <div class="cert-issuer">Scrimba</div>
+                    </div>
+                    <div class="cert-content">
+                      <h3 class="cert-title">Next.js Development</h3>
+                      <div class="cert-skills">
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">SSR</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Routing</span>
+                      </div>
+                    </div>
+                    <div class="cert-footer">
+                      <i class="fas fa-external-link-alt"></i>
+                      <span>View Certificate</span>
+                    </div>
+                  </div>
+
+                  <!-- Node.js Certificate from Scrimba -->
+                  <div
+                    class="certificate-card"
+                    onclick="window.open('./certificates/Learn%20Node.js.pdf', '_blank')"
+                  >
+                    <div class="cert-header">
+                      <img
+                        src="https://avatars.githubusercontent.com/u/29487484?s=200&v=4"
+                        alt="Scrimba Logo"
+                        class="cert-logo"
+                      />
+                      <div class="cert-issuer">Scrimba</div>
+                    </div>
+                    <div class="cert-content">
+                      <h3 class="cert-title">Node.js Development</h3>
+                      <div class="cert-skills">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">APIs</span>
+                        <span class="skill-tag">Backend</span>
+                      </div>
+                    </div>
+                    <div class="cert-footer">
+                      <i class="fas fa-external-link-alt"></i>
+                      <span>View Certificate</span>
+                    </div>
+                  </div>
+
+                  <!-- Express Certificate from Scrimba -->
+                  <div
+                    class="certificate-card"
+                    onclick="window.open('./certificates/Learn%20Express.js.pdf', '_blank')"
+                  >
+                    <div class="cert-header">
+                      <img
+                        src="https://avatars.githubusercontent.com/u/29487484?s=200&v=4"
+                        alt="Scrimba Logo"
+                        class="cert-logo"
+                      />
+                      <div class="cert-issuer">Scrimba</div>
+                    </div>
+                    <div class="cert-content">
+                      <h3 class="cert-title">Express.js Development</h3>
+                      <div class="cert-skills">
+                        <span class="skill-tag">Express</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">REST API</span>
+                        <span class="skill-tag">Middleware</span>
+                      </div>
+                    </div>
+                    <div class="cert-footer">
+                      <i class="fas fa-external-link-alt"></i>
+                      <span>View Certificate</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="item"
+          style="
+            background-image: url(./imgs/port3.jpg);
+            background-position: 0% 75%;
+          "
         >
           <div class="content">
             <div class="name">Experience</div>
@@ -64,19 +282,24 @@
                 <p class="section__text__p1"></p>
                 <h2 class="experience-sub-title">Technical Skills</h2>
                 <div class="article-container">
-                  <!-- Skill cards -->
                   <article class="skill-card">
-                    <i class="fab fa-python skill-icon"></i> <!-- Changed from fas to fab -->
+                    <i class="fab fa-python skill-icon"></i>
                     <div>
                       <h3>Python</h3>
                       <div class="skill-level">
                         <span class="filled"></span>
                         <span class="filled"></span>
-                        <span class="filled"></span>
-                        <span class="filled"></span>
-                        <span></span> <!-- Removed filled class to show 4/5 -->
+                        <span></span>
                       </div>
-                      <p>Advanced</p>
+                      <p>Intermediate</p>
+                      <div class="sub-technologies">
+                        <span class="sub-tech"
+                          ><i class="fas fa-brain"></i> TensorFlow</span
+                        >
+                        <span class="sub-tech"
+                          ><i class="fas fa-fire"></i> PyTorch</span
+                        >
+                      </div>
                     </div>
                   </article>
                   <article class="skill-card">
@@ -87,8 +310,6 @@
                         <span class="filled"></span>
                         <span class="filled"></span>
                         <span class="filled"></span>
-                        <span class="filled"></span>
-                        <span></span> <!-- Removed filled class to show 4/5 -->
                       </div>
                       <p>Advanced</p>
                     </div>
@@ -99,12 +320,10 @@
                       <h3>SQL</h3>
                       <div class="skill-level">
                         <span class="filled"></span>
-                        <span class="filled"></span>
-                        <span class="filled"></span>
                         <span></span>
                         <span></span>
                       </div>
-                      <p>Intermediate</p>
+                      <p>Basic</p>
                     </div>
                   </article>
                   <article class="skill-card">
@@ -116,8 +335,6 @@
                       <div class="skill-level">
                         <span class="filled"></span>
                         <span class="filled"></span>
-                        <span class="filled"></span>
-                        <span></span>
                         <span></span>
                       </div>
                       <p>Intermediate</p>
@@ -129,8 +346,6 @@
                       <h3>Java</h3>
                       <div class="skill-level">
                         <span class="filled"></span>
-                        <span class="filled"></span>
-                        <span></span>
                         <span></span>
                         <span></span>
                       </div>
@@ -145,10 +360,8 @@
                         <span class="filled"></span>
                         <span class="filled"></span>
                         <span></span>
-                        <span></span>
-                        <span></span>
                       </div>
-                      <p>Basic</p>
+                      <p>Intermediate</p>
                     </div>
                   </article>
                   <article class="skill-card">
@@ -159,13 +372,11 @@
                         <span class="filled"></span>
                         <span class="filled"></span>
                         <span></span>
-                        <span></span>
-                        <span></span>
                       </div>
-                      <p>Basic</p>
+                      <p>Intermediate</p>
                     </div>
                   </article>
-                  <article class="skill-card">
+                  <article class="skill-card expanded-card">
                     <i class="fab fa-js skill-icon"></i>
                     <div>
                       <h3>JavaScript</h3>
@@ -173,10 +384,22 @@
                         <span class="filled"></span>
                         <span class="filled"></span>
                         <span></span>
-                        <span></span>
-                        <span></span>
                       </div>
-                      <p>Basic</p>
+                      <p>Intermediate</p>
+                      <div class="sub-technologies">
+                        <span class="sub-tech"
+                          ><i class="fab fa-react"></i> React</span
+                        >
+                        <span class="sub-tech"
+                          ><i class="fas fa-triangle"></i> Next.js</span
+                        >
+                        <span class="sub-tech"
+                          ><i class="fab fa-node-js"></i> Node.js</span
+                        >
+                        <span class="sub-tech"
+                          ><i class="fas fa-server"></i> Express</span
+                        >
+                      </div>
                     </div>
                   </article>
                 </div>
@@ -185,16 +408,17 @@
           </div>
         </div>
 
-        <!-- Projects page -->
         <div
           class="item"
-          style="background-image: url(./imgs/port3.jpg); background-position: 0% 90%"
+          style="
+            background-image: url(./imgs/port4.jpg);
+            background-position: 0% 90%;
+          "
         >
           <div class="content">
             <div class="name">Projects</div>
             <div class="desc-container">
               <div class="desc">
-                
                 <div class="project-carousel">
                   <div class="project-carousel-container">
                     <!-- Project 1 -->
@@ -204,43 +428,82 @@
                       </div>
                       <div class="project-title-container">
                         <h3 class="project-title">WhileVisualizer</h3>
-                        <a href="https://github.com/iintii/Main_Projects/tree/main/WhileVisualizer" class="github-btn" target="_blank">
+                        <a
+                          href="https://github.com/iintii/Main_Projects/tree/main/WhileVisualizer"
+                          class="github-btn"
+                          target="_blank"
+                        >
                           <i class="fab fa-github"></i>
                         </a>
-                        <button class="play-btn" title="Play Demo"><i class="fas fa-play"></i></button>
+                        <button class="play-btn" title="Play Demo">
+                          <i class="fas fa-play"></i>
+                        </button>
                       </div>
-                      <p class="project-description">Custom language compiler and interactive GUI built from scratch, visualizing the intricacies of the inner workings of a compiler.</p>
+                      <p class="project-description">
+                        Custom language compiler and interactive GUI built from
+                        scratch, visualizing the intricacies of the inner
+                        workings of a compiler.
+                      </p>
                     </div>
-                    
+
                     <!-- Project 2 -->
                     <div class="project-item">
-                      <div class="project-icon"><i class="fa-duotone fa-solid fa-person-running" style="font-size: 200px;"></i>
+                      <div class="project-icon">
+                        <i
+                          class="fa-duotone fa-solid fa-person-running"
+                          style="font-size: 200px"
+                        ></i>
                       </div>
                       <div class="project-title-container">
                         <h3 class="project-title">Dapr Dash</h3>
-                        <a href="https://github.com/iintii/Main_Projects/tree/main/Game.Dapr_Dash" class="github-btn" target="_blank">
+                        <a
+                          href="https://github.com/iintii/Main_Projects/tree/main/Game.Dapr_Dash"
+                          class="github-btn"
+                          target="_blank"
+                        >
                           <i class="fab fa-github"></i>
                         </a>
-                        <button class="play-btn" title="Play Demo"><i class="fas fa-play"></i></button>
+                        <button class="play-btn" title="Play Demo">
+                          <i class="fas fa-play"></i>
+                        </button>
                       </div>
-                      <p class="project-description">2D platformer to showcase core C++ concepts such as encapsulation with custom structs, vector container management, and memory-efficient resource handling.</p>
+                      <p class="project-description">
+                        2D platformer to showcase core C++ concepts such as
+                        encapsulation with custom structs, vector container
+                        management, and memory-efficient resource handling.
+                      </p>
                     </div>
-                    
+
                     <!-- Project 3 -->
                     <div class="project-item">
                       <div class="project-icon">
                         <!-- Icon placeholder -->
-                        <i class="fa-duotone fa-solid fa-dove" style="font: size 200px;--fa-primary-color: #000000; --fa-secondary-color: #88a300;"></i>
+                        <i
+                          class="fa-duotone fa-solid fa-dove"
+                          style="
+                            font: size 200px;
+                            --fa-primary-color: #000000;
+                            --fa-secondary-color: #88a300;
+                          "
+                        ></i>
                       </div>
                       <div class="project-title-container">
                         <h3 class="project-title">BirdVision CNN</h3>
-                        <a href="https://github.com/iintii/Main_Projects/blob/main/Data%20Science%20and%20Analytics%20Projects/cnn-bird-species-img-classification-optimization.ipynb" class="github-btn" target="_blank">
+                        <a
+                          href="https://github.com/iintii/Main_Projects/blob/main/Data%20Science%20and%20Analytics%20Projects/cnn-bird-species-img-classification-optimization.ipynb"
+                          class="github-btn"
+                          target="_blank"
+                        >
                           <i class="fab fa-github"></i>
                         </a>
                       </div>
-                      <p class="project-description">Advanced image classification system leveraging deep Convolutional Neural Networks with TensorFlow and Keras Tuner, using Bayesian optimization.</p>
+                      <p class="project-description">
+                        Advanced image classification system leveraging deep
+                        Convolutional Neural Networks with TensorFlow and Keras
+                        Tuner, using Bayesian optimization.
+                      </p>
                     </div>
-                    
+
                     <!-- Project 4 -->
                     <div class="project-item">
                       <div class="project-icon">
@@ -248,14 +511,24 @@
                         <i class="fa-solid fa-code-branch"></i>
                       </div>
                       <div class="project-title-container">
-                        <h3 class="project-title">Branch Prediction Simulator</h3>
-                        <a href="https://github.com/iintii/Main_Projects/tree/main/BranchPrediction_ASCII_Simulator" class="github-btn" target="_blank">
+                        <h3 class="project-title">
+                          Branch Prediction Simulator
+                        </h3>
+                        <a
+                          href="https://github.com/iintii/Main_Projects/tree/main/BranchPrediction_ASCII_Simulator"
+                          class="github-btn"
+                          target="_blank"
+                        >
                           <i class="fab fa-github"></i>
                         </a>
                       </div>
-                      <p class="project-description">Advanced CPU architecture simulator implementing Bimodal, GShare, Hybrid, and Smith n-bit algorithms with real-time ASCII visualization.</p>
+                      <p class="project-description">
+                        Advanced CPU architecture simulator implementing
+                        Bimodal, GShare, Hybrid, and Smith n-bit algorithms with
+                        real-time ASCII visualization.
+                      </p>
                     </div>
-                    
+
                     <!-- Project 5 -->
                     <div class="project-item">
                       <div class="project-icon">
@@ -263,13 +536,21 @@
                       </div>
                       <div class="project-title-container">
                         <h3 class="project-title">My Portfolio</h3>
-                        <a href="https://github.com/iintii/Main_Projects/tree/main/Portfolio%20%5BHTML%2CCSS%2CJS%5D" class="github-btn" target="_blank">
+                        <a
+                          href="https://github.com/iintii/Main_Projects/tree/main/Portfolio%20%5BHTML%2CCSS%2CJS%5D"
+                          class="github-btn"
+                          target="_blank"
+                        >
                           <i class="fab fa-github"></i>
                         </a>
                       </div>
-                      <p class="project-description">A portfolio website built with vanilla HTML5, CSS3, and JavaScript, featuring advanced DOM manipulation, CSS keyframe animations, and dynamic content rendering.</p>
+                      <p class="project-description">
+                        A portfolio website built with vanilla HTML5, CSS3, and
+                        JavaScript, featuring advanced DOM manipulation, CSS
+                        keyframe animations, and dynamic content rendering.
+                      </p>
                     </div>
-                    
+
                     <!-- Project 6 -->
                     <div class="project-item">
                       <div class="project-icon">
@@ -277,13 +558,21 @@
                       </div>
                       <div class="project-title-container">
                         <h3 class="project-title">Ensemble Stroke Predictor</h3>
-                        <a href="https://github.com/iintii/Main_Projects/blob/main/Data%20Science%20and%20Analytics%20Projects/tree-based-models-and-ensemble-learning-algorithms%20(1).ipynb" class="github-btn" target="_blank">
+                        <a
+                          href="https://github.com/iintii/Main_Projects/blob/main/Data%20Science%20and%20Analytics%20Projects/tree-based-models-and-ensemble-learning-algorithms%20(1).ipynb"
+                          class="github-btn"
+                          target="_blank"
+                        >
                           <i class="fab fa-github"></i>
                         </a>
                       </div>
-                      <p class="project-description">Advanced stroke prediction system implementing Random Forest, Gradient Boosting and Voting Classifiers with Bayesian hyperparameter optimization.</p>
+                      <p class="project-description">
+                        Advanced stroke prediction system implementing Random
+                        Forest, Gradient Boosting and Voting Classifiers with
+                        Bayesian hyperparameter optimization.
+                      </p>
                     </div>
-                    
+
                     <!-- Project 7 -->
                     <div class="project-item">
                       <div class="project-icon">
@@ -291,31 +580,51 @@
                       </div>
                       <div class="project-title-container">
                         <h3 class="project-title">Bots Galore</h3>
-                        <a href="https://github.com/iintii/Main_Projects/tree/main/API_Reddit_News_Bot_V2" class="github-btn" target="_blank">
+                        <a
+                          href="https://github.com/iintii/Main_Projects/tree/main/API_Reddit_News_Bot_V2"
+                          class="github-btn"
+                          target="_blank"
+                        >
                           <i class="fab fa-github"></i>
                         </a>
                       </div>
-                      <p class="project-description">Automated content aggregation system built with PRAW API integration that securely authenticates with OAuth2 and scrapes targeted data across multiple subreddits.</p>
+                      <p class="project-description">
+                        Automated content aggregation system built with PRAW API
+                        integration that securely authenticates with OAuth2 and
+                        scrapes targeted data across multiple subreddits.
+                      </p>
                     </div>
-                    
+
                     <!-- Project 8 -->
                     <div class="project-item">
                       <div class="project-icon">
                         <i class="fa-sharp fa-solid fa-plane-arrival"></i>
                       </div>
                       <div class="project-title-container">
-                        <h3 class="project-title">Airlines Customer Sentment Analysis</h3>
-                        <a href="https://github.com/iintii/Main_Projects/blob/main/Data%20Science%20and%20Analytics%20Projects/sentiment-analysis-of-airlines-tweets.ipynb" class="github-btn" target="_blank">
+                        <h3 class="project-title">
+                          Airlines Customer Sentment Analysis
+                        </h3>
+                        <a
+                          href="https://github.com/iintii/Main_Projects/blob/main/Data%20Science%20and%20Analytics%20Projects/sentiment-analysis-of-airlines-tweets.ipynb"
+                          class="github-btn"
+                          target="_blank"
+                        >
                           <i class="fab fa-github"></i>
                         </a>
                       </div>
-                      <p class="project-description">Sentiment analysis platform built in R using NRC lexicon for airline feedback classification with topic modeling algorithms and real-time Shiny visualizations.</p>
+                      <p class="project-description">
+                        Sentiment analysis platform built in R using NRC lexicon
+                        for airline feedback classification with topic modeling
+                        algorithms and real-time Shiny visualizations.
+                      </p>
                     </div>
                   </div>
-                  
+
                   <!-- Project navigation controls with dots between arrows -->
                   <div class="project-navigation">
-                    <button class="project-nav-btn prev-project"><i class="fas fa-chevron-left"></i></button>
+                    <button class="project-nav-btn prev-project">
+                      <i class="fas fa-chevron-left"></i>
+                    </button>
                     <div class="project-dots">
                       <span class="project-dot active"></span>
                       <span class="project-dot"></span>
@@ -326,7 +635,9 @@
                       <span class="project-dot"></span>
                       <span class="project-dot"></span>
                     </div>
-                    <button class="project-nav-btn next-project"><i class="fas fa-chevron-right"></i></button>
+                    <button class="project-nav-btn next-project">
+                      <i class="fas fa-chevron-right"></i>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -334,10 +645,12 @@
           </div>
         </div>
 
-        <!-- Contact page -->
         <div
           class="item"
-          style="background-image: url(./imgs/port4.jpg); background-position: 0% 65%"
+          style="
+            background-image: url(./imgs/port1.jpg);
+            background-position: 0% 65%;
+          "
         >
           <div class="content">
             <div class="name">Contact</div>
@@ -345,7 +658,10 @@
               <div class="desc">
                 <h2 class="experience-sub-title">Get In Touch</h2>
                 <div class="contact-details">
-                  <div class="contact-item copy-email" onclick="copyEmailToClipboard('intihoss@gmail.com', this)">
+                  <div
+                    class="contact-item copy-email"
+                    onclick="copyEmailToClipboard('intihoss@gmail.com', this)"
+                  >
                     <i class="fas fa-envelope contact-icon"></i>
                     <p>Email: intihoss@gmail.com</p>
                     <span class="copy-tooltip">Click to copy</span>
@@ -373,22 +689,27 @@
         </div>
       </div>
 
-      <!-- Video Modal for WhileVisualizer Demo (moved inside .container for centering) -->
       <div id="whileVisualizerModal" class="video-modal">
         <div class="video-modal-content">
           <span class="video-modal-close">&times;</span>
           <video id="whileVisualizerVideo" controls>
-            <source src="imgs/whilevisualizer-demo-fixed.mp4" type="video/mp4">
+            <source
+              src="imgs/whilevisualizer-demo-fixed.mp4"
+              type="video/mp4"
+            />
             Your browser does not support the video tag.
           </video>
         </div>
       </div>
 
-      <!-- GIF Modal for Dapr Dash Demo -->
       <div id="daprDashModal" class="gif-modal">
         <div class="gif-modal-content">
           <span class="gif-modal-close">&times;</span>
-          <img id="daprDashGif" src="imgs/dasherGIF.gif" alt="Dapr Dash Demo GIF" />
+          <img
+            id="daprDashGif"
+            src="imgs/dasherGIF.gif"
+            alt="Dapr Dash Demo GIF"
+          />
         </div>
       </div>
 
