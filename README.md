@@ -21,7 +21,7 @@
 ---
 
 ## 🚀 About Me
-I’m a **data-driven explorer** who’s passionate about **tackling real-world problems** with creative solutions. Currently, I’m pursuing my **M.S. in Computer Science** at the University of Central Florida—after earning my **B.S. in Data Science** at the University of South Florida—building on a solid foundation in:
+I’m a **data-driven explorer** who’s passionate about **tackling real-world problems** with creative solutions. Currently, I’m pursuing my **M.S. in Computer Science** at the University of South Florida—after earning my **B.S. in Data Science**—building on a solid foundation in:
 - Compiler and API construction
 - Machine Learning
 - Advanced Statistics & Predictive Analysis
@@ -73,3 +73,4 @@ Check out each folder’s README to explore the details, or jump straight into a
 I’m always excited to collaborate, learn, and exchange ideas. Feel free to [reach out via email](mailto:intihoss@gmail.com), connect on [LinkedIn](#), or explore my other works on [GitHub](#). Let’s build something amazing together!
 
 > **_“The only way to do great work is to love what you do.” — Steve Jobs_**
+
